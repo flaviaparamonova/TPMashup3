@@ -53,8 +53,8 @@ def run_MAX_T():
     Mesure en continu toutes les 15 sec.
     Toutes les 15 minutes -> calcule la valeur max et l’écrit dans MAX_temp_flow.json
     """
-    INTERVAL = 1          # 15 sec
-    WINDOW_DURATION = 15*60  # 15 minutes -> 900 sec
+    INTERVAL = 15       # 15 sec
+    WINDOW_DURATION = 15*60 # 15 minutes -> 900 sec
     NB_MEASURES = WINDOW_DURATION // INTERVAL  # = 60 mesures
 
     print("Lancement du flot MAX-T… (Ctrl+C pour arrêter)")
@@ -97,7 +97,6 @@ def run_MAX_T():
 
 
 def main():
-    print("200 = OK, 4XX = erreur client, 5XX = serveur")
     run_MAX_T()
 
 
